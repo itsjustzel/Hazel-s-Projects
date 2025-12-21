@@ -150,6 +150,7 @@ def print_slot_machine(columns):
 # Handles user deposit
 # =========================
 
+# GOOD COHESION - FUNCTIONAL COHESION
 def deposit():
     while True:
         # Keeps asking until valid input is provided
@@ -178,6 +179,7 @@ def deposit():
 # Gets number of lines to bet on
 # =========================
 
+# BAD COUPLING - COMMON COUPLING
 def get_numlines():
     while True:
         lines = input("How many lines do you want to bet on? (1-" + str(MAX_LINES) + ")")
@@ -202,6 +204,7 @@ def get_numlines():
 # Gets bet per line
 # =========================
 
+# BAD COUPLING - COMMON COUPLING
 def get_bet():
     while True:
         amount = input("What would you like to bet on each line? $")
@@ -225,6 +228,7 @@ def get_bet():
 # Runs one game spin
 # =========================
 
+#  GOOD COUPLING - DATA COUPLING
 def spin(balance):
     lines = get_numlines()
     # Gets how many lines the user wants to bet on
